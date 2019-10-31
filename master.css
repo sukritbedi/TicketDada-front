@@ -1,0 +1,186 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+body
+{
+    width: 100%;
+}
+nav
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99vw;
+    height: 13vh;
+    transition: .3s;
+    background-color: white;      /*this is optional if you want a transparent bar remove this line*/
+    z-index: 999;
+}
+
+.logo
+{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    height: 55px;
+}
+
+nav.black
+{
+    height: 80px;
+    padding: 0 30px;
+    background-color: black;
+}
+
+nav ul
+{
+    display: flex;
+    list-style: none;
+    color: solid;
+}
+
+.main-nav
+{
+    float: right;
+    margin-top: 10px;
+    list-style: none;
+}
+.main-nav li
+{
+    display: block;
+    padding: 20px 0;
+}
+.main-nav li a
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+.main-nav li a:hover
+{
+    border: 1px solid white;
+    background-color: #faa936;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.front
+{
+    height: 100vh;
+
+    background-color: none;
+    background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(img/background1.jpg);
+    background-position: center;
+    background-size: 1400px;
+}
+.front h1
+{
+    font-size: 40px;
+    position: absolute;
+    top: 30vh;
+    left: 60vw;
+    width: 35vw;
+    text-align: center;
+    text-transform: unset;
+    color: white;
+}
+
+.front h2{
+  font-size: 25px;
+  position: absolute;
+  top: 40vh;
+  left: 60vw;
+  width: 36vw;
+  text-align: center;
+  text-transform: unset;
+  color: white;
+}
+
+.button
+{
+    position: absolute;
+    top: 54vh;
+    left: 69vw;
+}
+
+.btn
+{
+    font-size: 13px;
+
+    margin-right: 25px;
+    padding: 10px 30px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-one, .btn-two
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn:hover
+{
+    background-color: darkorange;
+}
+
+.front1
+{
+    width: 100%;
+    padding: 30px;
+    padding-right: 0px;
+    max-width: 96vw;
+}
+.front1 h1
+{
+    margin: 0;
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1;
+}
+
+#partner img{
+  height: 140px;
+  width: auto;
+  padding: 0px 45px;
+}
+
+#paytm{
+  height: 116px;
+}
+
+.front1 hr {
+  height: 2px;
+  width: 60px;
+  background: #71bd46;
+  position: relative;
+  border: 0;
+  margin: 30px 0 0 0;
+}
+
+.imgcontainer{
+  float: left;
+  width: 20vw;
+}
+
+.text{
+  float: right;
+  width: 73vw;
+  margin: 20px;
+  margin-top: 5px;
+  margin-right: 0;
+  padding: 3px;
+  font-size: 15px;
+  line-height: 1.5em;
+}

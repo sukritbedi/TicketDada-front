@@ -1,0 +1,42 @@
+<div ng-controller="userdata">
+  <div ng-show="update">
+    <h1>View Users</h1>
+    <table>
+      <thead>
+        <th>Customer Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Login Type</th>
+        <th></th>
+      </thead>
+      <tr ng-repeat="user in users">
+        <td>{{user.name}}</td>
+        <td>{{user.email_id}}</td>
+        <td>{{user.phone_number}}</td>
+        <td>{{user.type | usertype}}</td>
+        <td><input type="submit" value="Update" ng-click=useru(user._id,user.name,user.phone_number,user.email_id,user.type)></td>
+      </tr>
+    </table>
+  </div>
+  <div ng-hide="update">
+    <div class="col-lg-3">
+      <label for="id">ID</label><br><br><br>
+      <label for="name">Name</label><br><br><br>
+      <label for="phone_number">Phone Number</label><br><br><br>
+      <label for="email">Email</label><br><br><br>
+      <label for="type">User Type</label>
+    </div>
+    <div class="col-lg-5">
+      <input type="text" name="id" ng-model="id" disabled>
+      <input type="text" name="name" ng-model="name">
+      <input type="text" name="phone_number" ng-model="phnum">
+      <input type="text" name="email" ng-model="email">
+      <select name="type" ng-model="type">
+        <option value="0">User</option>
+        <option value="1">Admin</option>
+      </select>
+      <input type="reset" value="Back" ng-click="back()">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      <input type="submit" value="Submit" ng-click=userupdate()>
+    </div>
+  </div>
+</div>

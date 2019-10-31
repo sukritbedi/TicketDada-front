@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"  ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>IWP Project | CSE3002 J Component</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/filmroll.png">
+
+    <script src="../angular.js"></script>
+    <link rel="stylesheet" href="master.css">
+    <script type="text/javascript" src="angJs.js"></script>
+  </head>
+  <body>
+    <div class="col-lg-2 adminview" ng-controller="sidebar">
+      <div class="sidepanel" ng-click="addMov()">Add Movie</div>
+      <div class="sidepanel" ng-click="updateMov()">Update Movie</div>
+      <div class="sidepanel" ng-click="viewTrans()">View Transactions</div>
+      <div class="sidepanel" ng-click="viewUsers()">View Users</div>
+    </div>
+    <div class="col-lg-9 itempanel">
+      <div class="" ng-show = "amov"><!-- For the Adding of movie -->
+        <div ng-include="'amovie.html'"></div>
+      </div>
+      <div ng-show = "umov"><!-- For the Updading and Deleting of movie -->
+        <div ng-include="'umovie.html'"></div>
+      </div>
+      <div ng-show = "trans"><!-- For adding the Transactions checking -->
+        <div ng-include="'transactions.html'"></div>
+      </div>
+      <div ng-show = "user"><!-- For viewing user and changing the type of user -->
+        <div ng-include="'userdata.html'"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<div ng-controller="umovie">
+  <div ng-show="update">
+    <h1>Update Movies</h1>
+    <table>
+      <thead>
+        <th>Movie Name</th>
+        <th>Runtime</th>
+        <th>IMDB</th>
+        <th>Rotten Tomato</th>
+        <th>Age Rating</th>
+        <th></th>
+      </thead>
+      <tr ng-repeat="mov in movs">
+        <td>{{mov.name}}</td>
+        <td>{{mov.runtime}}</td>
+        <td>{{mov.imdb_rating}}</td>
+        <td>{{mov.rt_rating}}</td>
+        <td>{{mov.age_rating | age}}</td>
+        <td><input type="submit" value="Update" class="umovie" ng-click=umov(mov._id,mov.name,mov.runtime,mov.imdb_rating,mov.rt_rating,mov.age_rating,mov.description)></td>
+      </tr>
+    </table>
+  </div>
+  <div ng-hide="update">
+    <div class="col-lg-3">
+      <label for="id">ID</label><br><br><br>
+      <label for="name">Name</label><br><br><br>
+      <label for="runtime">Runtime</label><br><br><br>
+      <label for="imdb">IMDB Rating</label><br><br><br>
+      <label for="rt">Rotten Tomato Rating</label><br><br><br>
+      <label for="desc">Description</label><br><br><br>
+      <label for="age">Age Rating</label>
+    </div>
+    <div class="col-lg-5">
+      <input type="text" name="id" ng-model="id" disabled>
+      <input type="text" name="name" ng-model="name">
+      <input type="text" name="runtime" ng-model="runtime">
+      <input type="text" name="imdb" ng-model="imdb">
+      <input type="text" name="rt" ng-model="rt">
+      <input type="text" name="desc" ng-model="desc">
+      <select name="age" ng-model="age">
+        <option value="0">U</option>
+        <option value="1">A</option>
+        <option value="2">U/A</option>
+      </select>
+      <input type="reset" value="Back" ng-click="back()">&emsp;&emsp;&emsp;&emsp;
+      <input type="reset" value="Delete" ng-click="deletemovie()">&emsp;&emsp;&emsp;&emsp;
+      <input type="submit" value="Submit" ng-click=updatemovie()>
+    </div>
+  </div>
+</div>

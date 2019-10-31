@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>IWP Project | CSE3002 J Component</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/filmroll.png">
+    <script src="../angular.js"></script>
+    <script src="../angular-cookies.js"></script>
+    <link rel="stylesheet" href="master.css">
+    <script type="text/javascript" src="angJs.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <div class="container">
+      <span>Sign In</span>
+    </div>
+    <div class="imgcontainer">
+      <img src="../img/img-01.png" alt="">
+    </div>
+    <div class="maincontainer" ng-controller="loginSet">
+      <label for="userid">Email : </label><br><br>
+      <input type="text" name="email" placeholder="Enter the email" ng-model="email_id"><br><br><br>
+
+      <label for="pass">Password : </label><br><br>
+      <input type="password" name="pass" placeholder="Enter the password" ng-model="password"><br><br><br>
+
+      <input type="submit" name="submit" value="Submit" ng-click="loginAction(email_id, password)">
+    </div>
+  </body>
+</html>

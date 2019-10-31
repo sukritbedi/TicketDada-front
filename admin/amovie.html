@@ -1,0 +1,31 @@
+<div ng-controller="amovie">
+  <h1>Add Movie</h1>
+  <div class="col-lg-3">
+    <label for="mname">Movie Name</label><br><br><br>
+    <label for="rtime">Runtime</label><br><br><br>
+    <label for="imdb">IMDB Rating</label><br><br><br>
+    <label for="rt">Rotten Tomato Rating</label><br><br><br>
+    <label for="age">Age Rating</label><br><br><br>
+    <label for="img">Movie Logo</label>
+  </div>
+  <div class="col-lg-5">
+    <input type="text" name="mname" ng-model="mov_name">
+    <input type="text" name="rtime" ng-model="rtime">
+    <input type="text" name="imdb" ng-model="imdb">
+    <input type="text" name="rt" ng-model="rt">
+    <select name="age" ng-model="age_type">
+      <option value="0">U</option>
+      <option value="1">A</option>
+      <option value="2">U/A</option>
+    </select>
+    <input type="file" ng-model="img"><br><br>
+    <input type="reset" value="Reset" ng-click="reset()">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <input type="submit" value="Submit" ng-click=addmovie()>
+  </div>
+  <div class="col-lg-4">
+    <h4>List of live movies</h4>
+    <ul>
+      <li ng-repeat="mov in movs">{{mov.name}}</li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div ng-controller="movie_sel" ng-show="moviesel">
+  <div class="mov-sel">
+    <img src="http://localhost:3000/{{ms.image_source}}" alt="{{ms.mov_name}}">
+    <input type="button" class="b123" value="Go Back" ng-click=back()>
+    <div class="mov-sel-det1">
+      <h1>{{ms.name}} ({{ms.age_rating | age}})</h1>
+      <div id="mov-sel-age"> </div>
+      <h3>
+        <div id="mov-sel-runtime">Runtime : {{ms.runtime}}</div>
+        <div id="mov-sel-imdb"><img src="../img/cfrottentomatoes.png" alt="Rotten Tomatoes">&nbsp;{{ms.imdb_rating}}/10</div>
+        <div id="mov-sel-rt"><img src="../img/imdb.png" alt="IMDB">&nbsp;{{ms.rt_rating}}%</div>
+      </h3><br><br>
+      <div id="desc">
+        <h5>{{ms.description}}</h5>
+      </div>
+      <br>
+      <h4>Venues</h4>
+      <hr style="background-color:#6495ED;"><br><br>
+      <div class="mov-sel-cinema">Sri Vishnu Cinemas: Vellore</div>
+      <div class="timeview" ng-repeat="sch1 in sch1s">
+        <input type="button" class="b123" value="{{sch1.time}}" ng-click="bookticket(movie.mov_id,sch1.time,'1')">
+      </div><br><br><br><br>
+
+      <div class="mov-sel-cinema">PVR: Velocity, Silk Mill, Gandhi Nagar</div>
+      <div class="timeview" ng-repeat="sch2 in sch2s">
+        <input type="button" class="b123" value="{{sch2.time}}" ng-click="bookticket(movie.mov_id,sch1.time,'2')">
+      </div>
+
+    </div>
+  </div>
+</div>
